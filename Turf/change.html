@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Turf</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  
+  <link href="=" rel="icon">
+  
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  
+
+  <!--CSS File main-->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  
+</head>
+<body>
+     <!-- Top Bar -->
+     <section id="topbar" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-center justify-content-md-between">
+          <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope d-flex align-items-center"><a href="">Email</a></i>
+            <i class="bi bi-phone d-flex align-items-center ms-4"><span>Number</span></i>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Header -->
+      <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+      
+          <h1 class="logo"><a href="index.html">Turf<span>.</span></a></h1>
+          
+          <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
+      
+          <h1 style="font-family: 'Times New Roman', Times, serif;">Change Turf Time Slots</h1>
+      
+        </div>
+      </header>
+
+      <div style="display: flex; justify-content: center; align-items: center; margin-top: 50px;">   
+        <label for="date" style="display: block; text-align: center; width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Select a Date:</label>
+        <input type="date" id="date" name="date" style="width: 300px;" required>
+        <input type="submit" value="Go" style="margin-left: 10px;"></input><br><br>
+      </div>
+
+     
+      
+
+<!-- Main JS File -->
+
+
+<script src="assets/js/main.js"></script>
+
+
+<script>
+// user can select a present or future date
+
+let today = new Date();
+  let month = today.getMonth() + 1;
+  let day = today.getDate();
+  let year = today.getFullYear();
+  let formattedDate = year + '-' + month.toString().padStart(2, '0') + '-' + day.toString().padStart(2, '0');
+
+ 
+  document.getElementById("date").value = formattedDate;
+
+  
+
+  const dateInput = document.getElementById('date');
+  const today1 = new Date().toISOString().split('T')[0];
+  dateInput.setAttribute('min', today1);
+
+</script>
+
+
+</body>
+</html>
+   
+   
